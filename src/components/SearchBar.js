@@ -6,11 +6,11 @@ class SearchBar extends React.Component{
 
     OnFormSubmit(event){
         event.preventDefault();
+        //Accessing property onsubmit from app.js .In a functional component, props can be
+        // accessed by paramater and simply get the prop by props.something
+        //But here we should use this.props.property from another class based component
         this.props.onSubmit(this.state.term);
     }
-
-    
-    
 
     render(){
         return(
